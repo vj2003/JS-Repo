@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="view" onclick="view()">
+    <input type="button" value="erase" onclick="del()">
+    <input type="button" value="nxt" onclick="add()">
+    <img class="o">
+    <script>
+        function view() {
+            var one = document.getElementsByClassName("o")
+            one.src = "https://upload.wikimedia.org/wikipedia/en/2/21/Web_of_Spider-Man_Vol_1_129-1.png"
+        }
+        
+        function add(){
+            var one=document.getElementsByClassName("o")
+            one.src="https://donttellharrycom.files.wordpress.com/2021/03/list-of-important-spider-man-comics.jpg?w=600"
+
+        }
+        function add(){
+            var one=document.getElementsByClassName("o")
+            one.src="https://static.wikia.nocookie.net/marveldatabase/images/6/6c/Amazing_Spider-Man_Vol_1_506_Textless.jpg/revision/latest/scale-to-width-down/550?cb=20180114123428"
+
+        }
+        function del() {
+            var two = document.getElementsByClassName("o")
+            two.src=""
+        }
+        
+       
+        
+    </script>
+</body>
+
+</html>

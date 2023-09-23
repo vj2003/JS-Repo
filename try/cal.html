@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border: 2px solid;
+        border-style: dashed;
+        margin-left: 400px;
+    }
+
+    table {
+        background-color: cornflowerblue;
+
+    }
+
+    input[type=button] {
+        background-color: chartreuse;
+        font-weight: bolder;
+        font-size: 40px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .one {
+        border: 2px solid;
+    }
+    #one{
+        width: 200px;
+        height: 100px;
+        background-color: greenyellow;
+        font-size: 40px;
+    }
+</style>
+
+<body>
+   
+    <table>
+        <tr>
+            <td colspan="2" ><input type="text" id="one"></td>
+            <td class="a"><input type="button" value="AC" onclick="clears()"></td>
+            <td class="a"><input type="button" value="X" onclick="del()" id="del"></td>
+        </tr>
+        <tr>
+            <td class="a"><input type="button" value="0" onclick="abc('0')"></td>
+            <td class="a"><input type="button" value="." onclick="abc('.')"></td>
+            <td class="a"><input type="button" value="=" onclick="ans()"></td>
+            <td class="a"><input type="button" value="%" onclick="abc('%')"></td>
+        </tr>
+        </tr>
+        <tr>
+            <td class="a"><input type="button" value="7" onclick="abc('7')"></td>
+            <td class="a"><input type="button" value="8" onclick="abc('8')"></td>
+            <td class="a"><input type="button" value="9" onclick="abc('9')"></td>
+            <td class="a"><input type="button" value="*" onclick="abc('*')"></td>
+        </tr>
+        <tr>
+            <td class="a"><input type="button" value="4" onclick="abc('4')"></td>
+            <td class="a"><input type="button" value="5" onclick="abc('5')"></td>
+            <td class="a"><input type="button" value="6" onclick="abc('6')"></td>
+            <td class="a"><input type="button" value="-" onclick="abc('-')"></td>
+        </tr>
+        <tr>
+            <td class="a"><input type="button" value="1" onclick="abc('1')"></td>
+            <td class="a"><input type="button" value="2" onclick="abc('2')"></td>
+            <td class="a"><input type="button" value="3" onclick="abc('3')"></td>
+            <td class="a"><input type="button" value="+" onclick="abc('+')"></td>
+        </tr>
+        <script>
+            function abc(val){
+              var a=document.getElementById("one").value+=val;
+            }
+            function ans(){
+                var a=eval(document.getElementById("one").value)
+                document.getElementById("one").value=a;
+            }
+            function clears(){
+                document.getElementById("one").value="";
+            }
+            function del(){
+                var v= document.getElementById("one").value;
+                var x=v.slice(0,-1);
+                document.getElementById("one").value=x;
+            }
+        </script>
+    </table>
+</body>
+</html>

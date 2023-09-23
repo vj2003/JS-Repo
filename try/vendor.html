@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="button" value="-" onclick="minus()">
+    <input type="number" value=" "  id="an">
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="reset" onclick="del()">
+   
+    <script>
+        var count=0
+        function add(){
+        document.getElementById("an").value=count++;
+        }
+        function minus(){
+            document.getElementById("an").value=count--;
+        }
+        function del(){
+            document.getElementById("an").value=" ";
+        }
+    </script>
+</body>
+</html>

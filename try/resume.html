@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name: <input type="text" id="name"><br>
+    Father name: <input type="text" id="fana"><br>
+    DOB: <input type="date" id="dob"><br>
+    Email ID: <input type="email" id="ema"><br>
+    Phone NO.: <input type="number" id="pho"><br>
+    address: <input type="textarea" id="add"><br>
+    <input type="button" value="submit" onclick="valid()">
+    <input type="button" value="clear" onclick="clearing()">
+    <div> </div>
+    <script>
+        function valid(){
+            var a=document.getElementById("name").value
+            var b=document.getElementById("fana").value
+            var c=document.getElementById("dob").value
+            var d=document.getElementById("ema").value
+            var e=document.getElementById("pho").value
+            var f=document.getElementById("add").value
+            document.querySelector("div").innerHTML="first name : "+a+"<br>"+"father name : "+b+"<br>"+"DOB : "+c+"<br>"+"Email : "+c+"<br>"+"Phone : "+d+"<br>"+"Address : "+e+""
+            document.getElementById("name").value="";
+            document.getElementById("fana").value="";
+            document.getElementById("dob").value="";
+            document.getElementById("ema").value="";
+            document.getElementById("pho").value="";
+            document.getElementById("add").value="";
+
+
+        }
+        function clearing(){
+            document.getElementById("name").value="";
+            document.getElementById("fana").value="";
+            document.getElementById("dob").value="";
+            document.getElementById("ema").value="";
+            document.getElementById("pho").value="";
+            document.getElementById("add").value="";
+
+
+        }
+    </script>
+</body>
+</html>

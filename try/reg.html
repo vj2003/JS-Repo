@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clr{
+            background-color: cadetblue;
+            border-radius: 5px;
+            padding: 5px 6px;
+        }
+        #creat{
+            background-color: cadetblue;
+            border-radius: 5px;
+            padding: 5px 6px;
+        }
+        h1{
+            padding-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="border: 2px solid; width: 400px; height: 340px; padding: 30px; margin-left: 370px; margin-top:px; background-color: tomato;">
+        <h1>Register Your Account</h1><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Name: <input type="text" id="name" placeholder="enter name"><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Email ID: <input
+            type="email" id="mail" placeholder="email@gmail.com"><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Username: <input type="text"
+            id="user" placeholder="username"><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter Password: <input
+            type="password" id="pass" placeholder="password"><br><br>
+        Enter Confirm Password: <input type="password" id="cpass" placeholder="confirm password"><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="Clear Form" onclick="del()" id="clr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="Create Account" onclick="cre()" id="creat">
+    </div>
+    <h3 class="fw-bolder">Details</h3>
+        <div style="padding-left:500px; padding-top: 40PX; font-size: larger;">
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div>
+        <div id="four"></div>
+        <div id="five"></div>
+    </div>
+    <hr>
+    
+    <script>
+        function del() {
+            document.getElementById("name").value = "";
+            document.getElementById("mail").value="";
+            document.getElementById("user").value="";
+            document.getElementById("pass").value="";
+            document.getElementById("cpass").value="";
+        }
+        function cre() {
+            var a = document.getElementById("name").value
+            var b = document.getElementById("mail").value
+            var c = document.getElementById("user").value
+            var d = document.getElementById("pass").value
+            var f = document.getElementById("cpass").value
+            alert("Account Created")
+            // document.write("<br>")  
+            document.getElementById("one").innerHTML = "Name: " + a;
+            document.getElementById("two").innerHTML = "E-mail: " + b;
+            document.getElementById("three").innerHTML = "Username: " + c;
+        }
+    
+    </script>
+</body>
+
+</html>
